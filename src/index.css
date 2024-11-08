@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("../public/Fonts/WEB/fonts/Satoshi-BlackItalic.woff2")
+      format("woff2"),
+    url("../public/Fonts/WEB/fonts/Satoshi-BlackItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gambetta";
+  src: url("../public/Fonts/WEB2/fonts/Gambetta-Italic.woff2") format("woff2"),
+    url("../public/Fonts/WEB2/fonts/Gambetta-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@layer base {
+  h1 {
+    @apply scroll-m-20 text-5xl font-Satoshi text-secondary  tracking-tight lg:text-5xl;
+  }
+
+  h2 {
+    @apply scroll-m-20 border-b pb-2 text-4xl text-secondary   font-semibold tracking-tight first:mt-0;
+  }
+
+  h3 {
+    @apply scroll-m-20 text-2xl font-semibold text-secondary tracking-tight;
+  }
+
+  h4 {
+    @apply scroll-m-20 text-xl font-semibold text-secondary tracking-tight;
+  }
+
+  p {
+    @apply leading-7 text-secondary text-[26px] [&:not(:first-child)]:mt-6;
+
+    &.muted {
+      @apply text-sm;
+    }
+
+    &.small {
+      @apply text-sm font-medium leading-none;
+    }
+
+    &.large {
+      @apply text-lg font-semibold;
+    }
+
+    &.lead {
+      @apply text-xl;
+    }
+  }
+
+  blockquote {
+    @apply mt-6 border-l-2 pl-6 italic;
+  }
+
+  ul {
+    @apply my-6 ml-6  list-disc [&>li]:mt-2 text-lg;
+
+    & > li {
+      @apply text-lg font-serif;
+    }
+  }
+
+  code {
+    @apply relative rounded  px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+  }
+
+  table {
+    @apply w-full;
+
+    & > thead > tr {
+      @apply m-0 border-t p-0;
+
+      & > th {
+        @apply text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right;
+      }
+    }
+    & > tbody > tr {
+      @apply m-0 border-t p-0;
+
+      & > td {
+        @apply border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right;
+      }
+    }
+  }
+}
+
+@layer components {
+  .button {
+    @apply rounded-full bg-secondary px-5 py-3 text-sm font-medium text-primary shadow hover:text-secondary hover:bg-primary transition;
+  }
+  .button2{
+    @apply rounded-full bg-primary px-5 py-3 text-sm font-medium text-secondary  hover:text-primary hover:bg-secondary transition border-[#36210f] border;
+  }
+}
