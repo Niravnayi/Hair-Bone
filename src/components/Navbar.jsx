@@ -15,18 +15,18 @@ const Navbar = () => {
   return (
     <div className=" py-5 h-fit">
       <header className="h-fit">
-        <div className="mx-auto h-fit max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
+        <div className="mx-auto h-fit max-w-screen-xl  sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between ">
             <div className="md:flex md:items-center md:gap-12">
               <Link className="block text-teal-600" to="#">
                 <span className="sr-only">Logo</span>
                 <div>
-                  <img src={logo} alt="logo" className="h-56 max-sm:h-44 mt-3" />
+                  <img src={logo} alt="logo" className="w-36 md:w-44 mt-3" />
                 </div>
               </Link>
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden min-[990px]:block">
               <nav aria-label="Global">
                 <ul className="flex items-center gap-6 text-sm list-none ">
                   <li>

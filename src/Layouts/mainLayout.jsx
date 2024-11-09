@@ -6,7 +6,7 @@ import Footer from "../pages/Footer";
 const MainLayout = () => {
   return (
     
-    <div className="bg-primary h-fit  min-[990px]:px-[10%]">
+    <div className="bg-primary h-fit  min-[640px]:px-[2%] max-[640px]:px-[5%] ">
       <header>
         <Navbar />
       </header>
