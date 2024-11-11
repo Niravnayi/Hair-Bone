@@ -13,6 +13,7 @@ import cardimg2 from "../assets/About/cardimg2.webp";
 import cardimg3 from "../assets/About/cardimg3.webp";
 import hero from "../assets/Ad/saloon.webp";
 import Card from "../components/Card";
+import testimonial from "../assets/social/testimonial.mp4";
 import { VelocityScroll } from "../components/ui/scroll-based-velocity";
 
 const Home = () => {
@@ -227,30 +228,73 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex">
-        <div className="flex flex-col flex-1 justify-center">
+      <div className="flex max-[990px]:flex-col max-[990px]:items-center max-[990px]:text-center gap-12 my-10 py-10">
+        <div className="flex flex-col flex-1 justify-center p-5">
           <h3 className="">Services</h3>
-          <p className=" text-4xl font-normal mt-3">
-            We believe every client is{" "}
-            <span className="font-Gambetta"> unique</span> and deserves the most
+          <p className=" text-4xl font-medium mt-3">
+            We believe every client is <br />
+            <span className="font-Gambetta"> unique</span> and deserves the most{" "}
+            <br />
             bespoke attention.
           </p>
 
-          <p className="font-normal text-xl mt-5"> 
+          <p className="font-normal text-xl mt-5">
             We use eco-friendly, cruelty-free haircare products and are always
             striving to reduce waste. From our sustainable product line to our
             recycling practices, we’re proud to be a green salon that cares
             about our impact on the environment.
           </p>
 
-          <div className="mt-10"> 
-            <button className="button2">About Us</button>
+          <div className="mt-10">
+            <Link to="/about">
+              <button className="button2">About Us</button>
+            </Link>
           </div>
           <div className="flex gap-10"></div>
         </div>
 
-        <div className="flex-1 ">
-          <img src={slider1} alt="hero-img1" className="object-cover"  />
+        <div className="flex- flex justify-between ">
+          <img
+            src={slider1}
+            alt="hero-img1"
+            className=" rounded-3xl"
+            width={600}
+          />
+        </div>
+      </div>
+
+      <div className="w-auto h-auto">
+        <div>
+          <h3 className="text-center m-5">Testimonials</h3>
+          <p className="text-center text-4xl font-normal mb-5">
+            What other are saying
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 p-10 gap-10 w-full h-full">
+          <div className="flex-1">
+            <video autoPlay loop muted className="rounded-3xl">
+              <source src={testimonial} type="video/mp4" />
+            </video>
+          </div>
+
+          <div className="flex-1 bg-card rounded-3xl p-10 h-full">
+            <div className="flex flex-col justify-between h-full">
+            <p className="leading-relaxed text-3xl">
+              The attention to detail and personal care is unmatched. Plus, I
+              love that they use eco-friendly products. I’ve found my go-to
+              salon, and I wouldn’t trust my hair with anyone else!”
+            </p>
+            <div className="">
+              <p className="font-normal ">Caroline M</p>
+              <p className="font-normal mt-2 text-xl">Hair-Bone CLIENT</p>
+            </div>
+            </div>
+
+
+          </div>
+
+          <div className="flex-1 bg-secondary rounded-3xl"></div>
         </div>
       </div>
     </>
