@@ -121,7 +121,7 @@
     @apply my-6 ml-6  list-disc [&>li]:mt-2 text-lg;
 
     & > li {
-      @apply text-lg font-serif;
+      @apply text-lg font-Satoshi;
     }
   }
 

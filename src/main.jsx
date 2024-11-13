@@ -11,6 +11,7 @@ import About from "./pages/About.jsx";
 import AuthLayouts from "./Layouts/AuthLayouts.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import Blog from "./pages/Blog";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
               {
                 path: "About",
                 element: <About />,
+              },
+              {
+                path: "blog",
+                element: <Blog />,
               },
             ],
           },
