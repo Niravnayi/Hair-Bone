@@ -151,9 +151,9 @@
 
 @layer components {
   .button {
-    @apply rounded-full bg-secondary px-5 py-3 text-sm font-medium text-primary shadow hover:text-secondary hover:bg-primary transition duration-100;
+    @apply rounded-full bg-secondary px-5 py-3 text-sm font-medium text-primary shadow hover:text-secondary hover:bg-primary transition duration-200;
   }
   .button2{
-    @apply rounded-full bg-primary px-7 py-3 text-sm font-medium text-secondary  hover:text-primary hover:bg-secondary transition duration-100 border-[#36210f] border;
+    @apply rounded-full bg-primary px-7 py-3 text-sm font-medium text-secondary  hover:text-primary hover:bg-secondary transition duration-200 border-[#36210f] border;
   }
 }

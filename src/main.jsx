@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import React from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
@@ -8,10 +8,14 @@ import Home from "./pages/Home.jsx";
 import Services from "./pages/Services.jsx";
 import Contact from "./pages/Contact.jsx";
 import About from "./pages/About.jsx";
-import AuthLayouts from "./Layouts/AuthLayouts.jsx";
-import Login from "./pages/Login.jsx";
-import Register from "./pages/Register.jsx";
 import Blog from "./pages/Blog";
+import { ClerkProvider } from "@clerk/clerk-react";
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key");
+}
 
 const router = createBrowserRouter([
   {
@@ -51,26 +55,9 @@ const router = createBrowserRouter([
           },
         ],
       },
-      {
-        path: "auth",
-        element: <AuthLayouts />,
-        children: [
-          {
-            index: true,
-            element: <Login />,
-          },
-          {
-            path: "register",
-            element: <Register />,
-          },
-        ],
-      },
     ],
   },
-  {
-    path: "forgot-password",
-    // element: <ForgotPassword />,
-  },
+
   {
     path: "*",
     element: (
@@ -80,7 +67,11 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router}>
-    <App />
-  </RouterProvider>
+  <React.StrictMode>
+    <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
+      <RouterProvider router={router}>
+        <App />
+      </RouterProvider>
+    </ClerkProvider>
+  </React.StrictMode>
 );
