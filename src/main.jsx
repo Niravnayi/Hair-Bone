@@ -15,7 +15,8 @@ const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY || "pk_test_Z
 
 if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Publishable Key");
-}
+
+} 
 
 const router = createBrowserRouter([
   {
