@@ -186,7 +186,7 @@ const Home = () => {
           </div>
           <div className="flex gap-4 items-end">
             <div className="border  border-secondary  p-2 rounded-full">
-              <Link to="https://www.instagram.com/hairbone31/">
+              <Link to="https://www.instagram.com/hairbone_salon/" target="_blank">
                 <svg
                   width="24"
                   height="24"
