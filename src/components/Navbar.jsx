@@ -90,7 +90,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-20 left-0 w-full bg-primary shadow-md p-5 min-[990px]:hidden"
+            className="absolute top-28 left-0 w-full bg-primary shadow-md p-5 min-[990px]:hidden"
           >
             <nav>
               <ul className="flex flex-col gap-4 text-center list-none">
