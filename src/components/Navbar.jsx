@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <div className="py-5 h-fit">
-      <header className="h-fit">
+      <header className="h-fit sticky top-0 ">
         <div className="mx-auto h-fit max-w-screen-xl sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="md:flex md:items-center md:gap-12">
@@ -33,27 +33,29 @@ const Navbar = () => {
             <div className="hidden min-[990px]:block">
               <nav aria-label="Global">
                 <ul className="flex items-center gap-6 text-sm list-none">
-                  {["/", "/Services", "/Contact", "/About"].map((path, index) => (
-                    <li key={index} className="relative">
-                      <Link
-                        className={`text-secondary transition hover:text-[#747282] relative ${
-                          isActive(path) ? "text-[#747282] font-bold" : ""
-                        }`}
-                        to={path}
-                      >
-                        {path === "/" ? "Home" : path.slice(1)}
-                        {isActive(path) && (
-                          <motion.span
-                            layoutId="underline"
-                            className="absolute left-0 bottom-[-2px] h-[2px] bg-[#747282] w-full"
-                            initial={{ scaleX: 0 }}
-                            animate={{ scaleX: 1 }}
-                            transition={{ duration: 0.3 }}
-                          />
-                        )}
-                      </Link>
-                    </li>
-                  ))}
+                  {["/", "/Services", "/Contact", "/About"].map(
+                    (path, index) => (
+                      <li key={index} className="relative">
+                        <Link
+                          className={`text-secondary transition hover:text-[#747282] relative ${
+                            isActive(path) ? "text-[#747282] font-bold" : ""
+                          }`}
+                          to={path}
+                        >
+                          {path === "/" ? "Home" : path.slice(1)}
+                          {isActive(path) && (
+                            <motion.span
+                              layoutId="underline"
+                              className="absolute left-0 bottom-[-2px] h-[2px] bg-[#747282] w-full"
+                              initial={{ scaleX: 0 }}
+                              animate={{ scaleX: 1 }}
+                              transition={{ duration: 0.3 }}
+                            />
+                          )}
+                        </Link>
+                      </li>
+                    )
+                  )}
                 </ul>
               </nav>
             </div>
@@ -88,20 +90,34 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-16 left-0 w-full bg-primary shadow-md p-5 min-[990px]:hidden"
+            className="absolute top-20 left-0 w-full bg-primary shadow-md p-5 min-[990px]:hidden"
           >
             <nav>
               <ul className="flex flex-col gap-4 text-center list-none">
                 {["/", "/Services", "/Contact", "/About"].map((path, index) => (
-                  <li key={index}>
+                  <li key={index} className="relative">
                     <Link
-                      className={`text-secondary transition hover:text-[#747282] ${
+                      className={`relative text-secondary transition-all duration-300 hover:text-[#747282] ${
                         isActive(path) ? "text-[#747282] font-bold" : ""
                       }`}
                       to={path}
                       onClick={() => setIsOpen(false)}
                     >
                       {path === "/" ? "Home" : path.slice(1)}
+
+                      {/* Smooth animated underline */}
+                      {isActive(path) && (
+                        <motion.div
+                          className="absolute left-0 bottom-0 h-[2px] bg-[#747282]"
+                          initial={{ width: 0 }}
+                          animate={{ width: "100%" }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 100,
+                            damping: 15,
+                          }}
+                        />
+                      )}
                     </Link>
                   </li>
                 ))}

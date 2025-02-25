@@ -21,4 +21,4 @@ const Card = ({ img, alt, heading, info }) => {
   );
 };
 
-export default Card;
+export default Card;  

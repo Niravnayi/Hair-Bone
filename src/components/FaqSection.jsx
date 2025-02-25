@@ -43,7 +43,7 @@ export default function FAQ() {
   };
 
   return (
-    <div className="bg-[#FDF6F2] min-h-screen flex flex-col items-center py-10 px-5">
+    <div className="bg-[#FDF6F2] min-h-fit flex flex-col items-center  ">
       <h2 className="text-center text-xl text-gray-700 font-semibold uppercase mb-4">
         faq
       </h2>
