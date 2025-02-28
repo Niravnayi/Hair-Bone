@@ -41,12 +41,12 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validate()) {
-      alert("Form submitted successfully!");
-    }
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (validate()) {
+  //     alert("Form submitted successfully!");
+  //   }
+  // };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#fdf7f2] p-6">
@@ -55,8 +55,10 @@ const ContactForm = () => {
         Proin viverra, ligula sit amet ultrices semper, ligula arcu.
       </p>
       <form
+        action="https://formsubmit.co/niravlimbachia031@gmail.com"
+        method="POST"
         className="mt-6 w-full max-w-2xl bg-primary p-6 rounded-lg"
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
