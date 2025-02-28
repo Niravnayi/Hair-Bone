@@ -4,34 +4,34 @@ import { motion } from "framer-motion";
 
 const faqs = [
   {
-    question: "How much can I customise Webflow template?",
+    question: " What services do you offer?",
     answer:
-      "You can customize the template as much as you want using Webflow's design tools.",
+      "We offer haircuts, styling, coloring, keratin treatments, hair extensions, and more. Visit our Services page for a full list.",
   },
   {
-    question: "Do you offer discounts?",
+    question: " Do I need to book an appointment, or do you accept walk-ins?",
     answer:
-      "Yes, we offer discounts during special promotions and for bulk purchases.",
+      "We recommend booking an appointment to ensure availability, but we also welcome walk-ins based on availability.",
   },
   {
-    question: "Why Chic Sal is a great template?",
+    question: "Do you offer hair treatments for damaged hair?",
     answer:
-      "Chic Sal is designed with modern aesthetics and high performance in mind.",
+      "Yes! We provide deep conditioning, keratin treatments, and hair spa services to restore hair health.",
   },
   {
-    question: "What value Chic Sal brings?",
+    question: "Can I bring a picture of a hairstyle I want?",
     answer:
-      "It provides a sleek, user-friendly experience with responsive design and smooth animations.",
+      "Absolutely! Our stylists will work with you to achieve the look you desire.",
   },
   {
-    question: "Who is Wavesdesign?",
+    question: "Do you use organic or chemical-free hair products?",
     answer:
-      "Wavesdesign is a creative agency specializing in high-quality Webflow templates.",
+      "Yes, we have a selection of organic and sulfate-free products for customers with sensitive hair or scalp.",
   },
   {
-    question: "Why Wavesdesign templates are the best?",
+    question: "What hair color brands do you use?",
     answer:
-      "Wavesdesign templates are crafted with attention to detail, great UI/UX, and performance optimization.",
+      "We use high-quality, professional brands that ensure long-lasting and vibrant results.",
   },
 ];
 
