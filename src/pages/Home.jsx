@@ -48,9 +48,11 @@ const Home = () => {
               </p>
             </div>
             <div className="mt-5 flex gap-3 max-[990px]:justify-center">
-              <Button variant="secondary" className="button">
-                Schedule Visit
-              </Button>
+              <Link to="/contact">
+                <Button variant="secondary" className="button">
+                  Schedule Visit
+                </Button>
+              </Link>
               <button className="button2">
                 <Link to="/services">See Services </Link>
               </button>
@@ -186,7 +188,10 @@ const Home = () => {
           </div>
           <div className="flex gap-4 items-end">
             <div className="border  border-secondary  p-2 rounded-full">
-              <Link to="https://www.instagram.com/hairbone_salon/" target="_blank">
+              <Link
+                to="https://www.instagram.com/hairbone_salon/"
+                target="_blank"
+              >
                 <svg
                   width="24"
                   height="24"
