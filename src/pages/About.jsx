@@ -248,7 +248,7 @@ const About = () => {
       </div>
 
       <div className="flex justify-center mt-10">
-        <Link to="/Contact" target="_top">
+        <Link to="/Contact">
           <button className="button2 ">Lets'talk</button>
         </Link>
       </div>
