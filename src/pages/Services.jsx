@@ -5,7 +5,8 @@ import cardimg2 from "../assets/About/cardimg2.webp";
 import cardimg3 from "../assets/About/cardimg3.webp";
 import hero from "../assets/Ad/saloon.webp";
 import { Link } from "react-router-dom";
-
+import AOS from "aos";
+AOS.init();
 const Services = () => {
   return (
     <div>
@@ -23,31 +24,50 @@ const Services = () => {
 
       <section>
         <div className="flex flex-col w-full gap-10 items-center justify-center">
-          <Card2
-            img={cardimg3}
-            alt="cardimg3"
-            heading="Haircuts & styling"
-            info="Haircuts & styling shape and personalize your look for a fresh appearance."
-            button="Read More"
-          />
-          <Card2
-            img={cardimg2}
-            alt="cardimg2"
-            heading="Hair coloring"
-            info="Hair coloring adds depth and vibrancy, enhancing or changing your natural shade."
-            button="Read More"
-          />
-          <Card2
-            img={cardimg}
-            alt="cardimg"
-            heading="Hair treatments"
-            info="Hair treatments nourish and repair, restoring shine and strength to your hair."
-            button="Read More"
-          />
+          <div
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <Card2
+              img={cardimg3}
+              alt="cardimg3"
+              heading="Haircuts & styling"
+              info="Haircuts & styling shape and personalize your look for a fresh appearance."
+              button="Read More"
+            />
+          </div>
+
+          <div
+            data-aos="fade-left"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <Card2
+              img={cardimg2}
+              alt="cardimg2"
+              heading="Hair coloring"
+              info="Hair coloring adds depth and vibrancy, enhancing or changing your natural shade."
+              button="Read More"
+            />
+          </div>
+          <div
+            data-aos="fade-right"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+          >
+            <Card2
+              img={cardimg}
+              alt="cardimg"
+              heading="Hair treatments"
+              info="Hair treatments nourish and repair, restoring shine and strength to your hair."
+              button="Read More"
+            />
+          </div>
         </div>
       </section>
 
-      <section className="my-5">
+      <section className="my-5 mt-20">
         <div>
           <img src={hero} alt="heroimg" className="rounded-xl" />
         </div>

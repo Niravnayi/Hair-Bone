@@ -3,11 +3,12 @@ import cardimg from "../assets/Slider/slider-img-3.webp";
 import cardimg2 from "../assets/Slider/slider-img-1.webp";
 import cardimg3 from "../assets/Slider/slider-img-2.webp";
 import slider1 from "../assets/Slider/slider-img-1.webp";
-
 import { Link } from "react-router-dom";
 import hero from "../assets/Ad/saloon.webp";
 import { VelocityScroll } from "../components/ui/scroll-based-velocity";
 import FAQ from "../components/FaqSection";
+import AOS from "aos";
+AOS.init();
 
 const About = () => {
   return (
@@ -114,7 +115,7 @@ const About = () => {
       </section>
 
       <section className="my-5">
-        <div>
+        <div data-aos="flip-up" data-aos-delay="200" data-aos-duration="1000">
           <img src={hero} alt="heroimg" className="rounded-xl" />
         </div>
       </section>
@@ -247,7 +248,7 @@ const About = () => {
       </div>
 
       <div className="flex justify-center mt-10">
-        <Link to="/Contact"  target="_blank">
+        <Link to="/Contact" target="_blank">
           <button className="button2 ">Lets'talk</button>
         </Link>
       </div>

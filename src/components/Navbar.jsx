@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className="hidden min-[990px]:block">
               <nav aria-label="Global">
                 <ul className="flex items-center gap-6 text-sm list-none">
-                  {["/", "/Services", "/Contact", "/About"].map(
+                  {["/", "/About", "/Services", "/Contact"].map(
                     (path, index) => (
                       <li key={index} className="relative">
                         <Link
@@ -94,7 +94,7 @@ const Navbar = () => {
           >
             <nav>
               <ul className="flex flex-col gap-4 text-center list-none">
-                {["/", "/Services", "/Contact", "/About"].map((path, index) => (
+                {["/", "/About", "/Services", "/Contact"].map((path, index) => (
                   <li key={index} className="relative">
                     <Link
                       className={`relative text-secondary transition-all duration-300 hover:text-[#747282] ${
