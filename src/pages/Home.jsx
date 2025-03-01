@@ -180,7 +180,7 @@ const Home = () => {
               Ahmedabad, Gujarat 380013.
             </p>
             <p className="text-xl  underline mt-3">
-              <Link to="mailto:example@example.com">example@example.com</Link>
+              <Link to="mailto:hairbone787@gmail.com">hairbone787@gmail.com</Link>
             </p>
             <p className="text-xl  underline mt-1">
               <Link to="tel:+9197732 77350">+91 97732 77350</Link>

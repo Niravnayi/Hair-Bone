@@ -53,7 +53,7 @@ const ContactForm = () => {
         Get Your Appointment in Just a Click!
       </p>
       <form
-        action="https://formsubmit.co/nirav.codage@gmail.com"
+        action="https://formsubmit.co/hairbone787@gmail.com"
         method="POST"
         className="mt-6 w-full max-w-2xl bg-primary p-6 rounded-lg"
         onChange={handleSubmit}
