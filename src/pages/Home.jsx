@@ -44,7 +44,7 @@ const Home = () => {
               <p className=" font-medium">
                 Your go-to salon for stylish transformations –
                 <br />
-                creating custom looks for our Amsterdam clients
+                creating custom looks for our HAir&Bone clients
               </p>
             </div>
             <div className="mt-5 flex gap-3 max-[990px]:justify-center">
