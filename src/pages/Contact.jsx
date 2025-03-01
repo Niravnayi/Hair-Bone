@@ -49,11 +49,11 @@ const ContactForm = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#fdf7f2] p-6">
       <h2 className="text-3xl font-semibold text-[#3d2b1f]">Let’s talk</h2>
-      <p className="text-[#6c584c] mt-2 text-center">
-        Proin viverra, ligula sit amet ultrices semper, ligula arcu.
+      <p className="text-[#6c584c] mt-2 text-center font-semibold font-Gambetta">
+        Get Your Appointment in Just a Click!
       </p>
       <form
-        action="https://formsubmit.co/niravlimbachia031@gmail.com"
+        action="https://formsubmit.co/nirav.codage@gmail.com"
         method="POST"
         className="mt-6 w-full max-w-2xl bg-primary p-6 rounded-lg"
         onChange={handleSubmit}
@@ -84,6 +84,7 @@ const ContactForm = () => {
             )}
           </div>
         </div>
+
         <div className="mt-4">
           <input
             type="text"
@@ -96,8 +97,42 @@ const ContactForm = () => {
             <p className="text-red-500 text-sm">{errors.phone}</p>
           )}
         </div>
+
         <hr className="my-6 border-[#d3c4b5]" />
-        <div>
+
+        {/* Date and Time Fields */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-[#3d2b1f] font-medium mb-1">
+              Select Date
+            </label>
+            <input
+              type="date"
+              name="appointmentDate"
+              className="w-full p-3 rounded-full border bg-[#f3ebe5] focus:outline-none"
+              onChange={handleChange}
+            />
+            {errors.appointmentDate && (
+              <p className="text-red-500 text-sm">{errors.appointmentDate}</p>
+            )}
+          </div>
+          <div>
+            <label className="block text-[#3d2b1f] font-medium mb-1">
+              Select Time
+            </label>
+            <input
+              type="time"
+              name="appointmentTime"
+              className="w-full p-3 rounded-full border bg-[#f3ebe5] focus:outline-none"
+              onChange={handleChange}
+            />
+            {errors.appointmentTime && (
+              <p className="text-red-500 text-sm">{errors.appointmentTime}</p>
+            )}
+          </div>
+        </div>
+
+        <div className="mt-4">
           <label className="block text-[#3d2b1f] font-medium mb-1">
             What service are you interested in?
           </label>
@@ -117,6 +152,7 @@ const ContactForm = () => {
             <p className="text-red-500 text-sm">{errors.service}</p>
           )}
         </div>
+
         <div className="mt-4">
           <label className="block text-[#3d2b1f] font-medium">
             What’s your gender?
@@ -145,7 +181,9 @@ const ContactForm = () => {
             <p className="text-red-500 text-sm">{errors.gender}</p>
           )}
         </div>
+
         <hr className="my-6 border-[#d3c4b5]" />
+
         <div>
           <label className="block text-[#3d2b1f] font-medium">
             Let us know more
@@ -160,10 +198,13 @@ const ContactForm = () => {
             <p className="text-red-500 text-sm">{errors.message}</p>
           )}
         </div>
+
         <button type="submit" className="button2 mt-5 text-en">
           Submit
         </button>
+
         <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
       </form>
 
       <section className="my-5">
